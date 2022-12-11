@@ -46,8 +46,11 @@ button=tkinter.Button(top,text='UPLOAD',command=browseFiles)
 text = tkinter.Text(top, width=25, height=10)
 button2=tkinter.Button(top,text='DOWNLOAD',command=downloadFiles)
 files = ''
-for key in s3.list_objects(Bucket=config.bucket_name)['Contents']:
-    files += key['Key'] + '\n'
+if 'Contents' in s3.list_objects(Bucket=config.bucket_name):
+    for key in s3.list_objects(Bucket=config.bucket_name)['Contents']:
+        files += key['Key'] + '\n'
+else:
+    files = "No Files in S3"        
 
 #Add a text in Canvas
 canvas.create_text(250, 150, text=files, fill="black", font=('Helvetica 15 bold'))

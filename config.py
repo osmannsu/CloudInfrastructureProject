@@ -3,14 +3,15 @@ import csv,json
 from io import StringIO
 import boto3
 import os
-
-
+FileName = "Md.Osman-Nayeem_accessKeys.csv"
+bucket_name = 'midtermgroupthree'
 
 #Getting Access Key and Secret Access Key from CSV file
 #Opening the security file
-with open("Md.Osman-Nayeem_accessKeys.csv") as key:
+with open(FileName) as key:
     #Storing the contents of security file in the created variable aws_key
     aws_key = key.read()
+    #Converting with StringIO
     aws_key = StringIO(aws_key)
 # convert csv to json
 fieldnames = ("access_key", "secret_access_key")
@@ -25,4 +26,3 @@ aws_key_json = json.loads(json_data)
 access_key= str(aws_key_json[1]["access_key"])
 secret_access_key=  str(aws_key_json[1]["secret_access_key"])
 #print(type(access_key))
-bucket_name = 'midtermgroupthree'
