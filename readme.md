@@ -5,15 +5,24 @@ AWS services.</p>
 <p>Access to AWS, create an account</p>
 <p>Create access key id and secret access key.</p>
 <h1>Config in your PC </h1> 
-<p>Install PIP in your machine.</p>
-<p>Install Virtual environment</p>
-<p>Create a virtual environment ifor python in any directory.</p>
-<p>Activate virtual environment.</p>
-<p>Install boto3 inside the virtual environment</p>
-<p>Clone the folder.</p>
-<p>Enter your security key and bucket name in config.py file</p>
-<p>This is a paragraph.</p>
-<p>Replace your download folder path in downloadfilesfroms3.py file.</p>
+<h1>Install PIP in your machine.</h1>
+<p>python get-pip.py</p>
+<h1>Install Virtual environment</h1>
+<h1>Create a virtual environment for python in any directory.</h1>
+<p>To create a virtual environment in a given directory, type:
+
+python -m venv /path/to/directory</p>
+<h1>Activate virtual environment.</h1>
+<p>source evn_name/path/to/directory/activate</p>
+
+<h1>Install boto3 inside the virtual environment</h1>
+<p>pip install boto3</p>
+<h1>Clone the folder.</h1>
+
+<p>Most Important! Enter your security key and bucket name in config.py file</p>
+
+<p>Replace your download folder path in "downloadfilesfroms3.py" file.</p>
+
 <p>Run the gui.py.</p>
-<p>For upload select file types or select all files for any file type upload.</p>
-<p>For download, type the already uploaded file names shown in canvas one by one.</p>
+<p>For upload, click the UPLOAD button and select file types or select all files for any file type upload.</p>
+<p>For download, click the DOWNLOAD button and type the already uploaded file names shown in canvas one by one.</p>
